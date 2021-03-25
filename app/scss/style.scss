@@ -15,16 +15,16 @@
         border-bottom: none;
         border-right: 1px solid #202428;
         .logo{
-            width: 50px;
-            height: 50px;
-            padding: 50px 0;
+            width: 40px;
+            height: 40px;
             display: block;
-            margin: 0 auto;
+            margin: 10px auto;
             img{
                 width: 100%;
             }
         }
         &-user{
+            margin-top: 20px;
             width: 100%;
             border-bottom: 1px solid #202428;
             transition: background-color .1s ease-in-out;
@@ -77,6 +77,157 @@
                     a{
                         color: #46a2ef;
                     }
+                }
+            }
+        }
+    }
+}
+
+.header{
+    position: relative;
+    width: calc(100% - 220px);
+    margin-left: auto;
+    &__socials{
+        position: relative;
+        min-height: 70px;
+        background: rgba(0,0,0,.2);
+        border-bottom: 1px solid #202428;
+        &-links{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            li{
+                margin: 0 8px;
+                a{
+                    .fa-tiktok:hover{
+                        color: #25ffe1;
+                    }
+                    .fa-vk:hover{
+                        color: #0c5abb;
+                    }
+                    .fa-facebook-f:hover{
+                        color: #04479a;
+                    }
+                    .fa-instagram:hover{
+                        color: #f248f5;
+                    }
+                    .fa-youtube:hover{
+                        color: #f30c0c;
+                    }
+                    .fa-steam-symbol:hover{
+                        color: #2c7adc;
+                    }
+                    .fa-telegram-plane:hover{
+                        color: #29c4ff;
+                    }
+                    .fa-reddit-alien:hover{
+                        color: #ff5717;
+                    }
+                }
+            }
+        }
+    }
+    &__stats{
+        background: rgba(0,0,0,0.2);
+        border-bottom: 1px solid #202428;
+        border-top: none;
+        position: relative;
+        padding: 20px 15px;
+        margin-top: auto;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            li{
+                display: flex;
+                align-items: center;
+                color: #fff;
+                .left{
+                    padding-left: 20px;
+                }
+                .case{
+                    background: url(../img/case.svg);
+                    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(324deg) brightness(104%) contrast(97%);
+                    width: 40px;
+                    height: 40px;
+                }
+                .user{
+                    background: url(../img/user.svg);
+                    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(324deg) brightness(104%) contrast(97%);
+                    width: 35px;
+                    height: 40px;
+                }
+                .users{
+                    background: url(../img/users.svg);
+                    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(324deg) brightness(104%) contrast(97%);
+                    width: 50px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+.main{
+    position: relative;
+    width: calc(100% - 220px);
+    margin-left: auto;
+    .cases{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px 0 15px;
+        &__item{
+            margin-top: 20px;
+            width: 50%;
+            max-width: 260px;
+            min-width: 135px;
+            &:hover{
+                background-color: rgba(0,0,0,.15);
+            }
+            img{
+                max-width: 100%;
+                background-color: transparent;
+            }
+            .case__descr{
+                padding: 0 0 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                .price{
+                    min-width: 75%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row-reverse;
+                    padding: 7px 14px;
+                    position: relative;
+                    border-radius: 18px;
+                    background-color: #152431;
+                    border: 1px solid #1a2e40;
+                    font-weight: 500;
+                    transition: .2s ease-in-out;
+                }
+                .name{
+                    width: 100%;
+                    position: relative;
+                    font-weight: 600;
+                    color: #b1bbca;
+                    font-size: 1.02em;
+                    line-height: 1.1em;
+                    padding: 9px 10px 1px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    transition: .25s ease-in-out;
                 }
             }
         }
