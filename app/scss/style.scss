@@ -234,6 +234,37 @@
     }
 }
 
+.footer{
+    position: relative;
+    width: calc(100% - 220px);
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    font-size: 14px;
+    color: #b1bbca;
+    &__inner{
+        padding: 20px 15px;
+        border-top: 1px solid #202428;
+        .links{
+            padding-bottom: 20px;
+            a{
+                margin-right: 10px;
+                color: #b1bbca;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+        a{
+            margin-right: 10px;
+            color: #b1bbca;
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+}
 
 
 @import "media";
