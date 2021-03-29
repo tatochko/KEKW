@@ -192,6 +192,12 @@
             &:hover{
                 background-color: rgba(0,0,0,.15);
             }
+            &:hover .case__descr .price{
+                background-color: #1a2c3c;
+            }
+            &:hover .case__descr .name{
+                color: #fff;
+            }
             img{
                 max-width: 100%;
                 background-color: transparent;
@@ -266,5 +272,106 @@
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////// page: case /////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+.drop{
+    position: relative;
+    width: calc(100% - 220px);
+    margin-left: auto;
+    &__items{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: stretch;
+        .item-incase__item{
+            padding: 5px;
+            width: 25%;
+            cursor: pointer;
+            .item-incase{
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                height: 124px;
+                padding: 1px 0 0;
+                text-align: center;
+                text-decoration: none;
+                vertical-align: top;
+                transition: all .25s ease-in-out;
+                border: 1px solid hsla(0,0%,100%,.05);
+                border-bottom: 2px solid #fff;
+                z-index: 5;
+                &:before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: .2s ease;
+                }
+                &__inner{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    &:after{
+                        right: 0;
+                        background: linear-gradient(180deg,rgba(226,0,160,0) 10%,#e200a0);
+                    }
+                    .price{
+                        position: absolute;
+                        z-index: 6;
+                        right: 10px;
+                        top: 8px;
+                        text-align: right;
+                    }
+                    .dropimg{
+                        position: absolute;
+                        transition: all .25s ease-in-out;
+                        top: 5px;
+                        left: 50%;
+                        margin-left: -65px;
+                        width: 130px;
+                        height: 97px;
+                        z-index: 5;
+                        img{
+                            max-width: 100%;
+                            background-color: transparent;
+                        }
+                    }
+                    .descr-name{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        text-align: left;
+                        padding: 0 30px 5px 7px;
+                        color: #fff;
+                        z-index: 5;
+                    }
+                }
+            }
+            .classified{
+                border-width: 0 0 2px;
+                border-bottom-color: #e200a0;
+                &:before{
+                    background: linear-gradient(180deg,transparent 5%,rgba(226,0,160,.25));
+                }
+            } 
+            .item-incase:hover:before {
+                opacity: .8;
+            }
+        }
+        .item-incase__item:hover .item-incase{
+            will-change: color,opacity;
+        }
+        .item-incase__item:hover .dropimg{
+            top: 0;
+        }
+    }
+}
 
 @import "media";
