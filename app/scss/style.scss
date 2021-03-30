@@ -276,6 +276,54 @@
 ///////////////////////////// page: case /////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 
+.roll{
+    position: relative;
+    width: calc(100% - 220px);
+    margin-left: auto;
+    .roulette{
+        overflow: hidden;
+        height: 190px;
+        width: 100%;
+    }
+    .roulette-inner{
+        position: relative;
+        width: 822px;
+        margin: 20px auto 20px auto;
+        border: 1px #e200a0 solid;
+        box-shadow: 0px 7px 24.3px 2.7px #ff51f6;
+    }
+    .roulette-inner img{
+        border-width: 0 0 2px;
+        border-color: #e200a0;
+        background: linear-gradient(180deg, transparent 5%, rgba(226,0,160,0.25));
+        width:160px;
+        height:160px;
+        margin:2px;
+    }
+    .roulette-inner img.active{
+        border:2px solid rgba(89,0,153,.2);
+        box-sizing:border-box;
+        border-radius:50%;
+        padding:-4px 4px 2px 4px;
+        transform:scale(1.7);
+        z-index:1000;
+        background-color:rgba(0,255,127,.5);
+    }
+    #go{
+        padding: 15px 35px;
+        color: #e200a0;
+        background: rgba(0,0,0,0.5);
+        font-weight: bold;
+        letter-spacing: 1px;
+        border: none;
+        border: 1px #e200a0 solid;
+        cursor: pointer;
+        display: block;
+        border-radius: 30px;
+        margin: 0 auto;
+        outline: none;
+    }
+}
 
 .drop{
     position: relative;
